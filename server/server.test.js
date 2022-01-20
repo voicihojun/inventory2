@@ -15,7 +15,9 @@ describe("GET/ items는 ", () => {
   before((done) => {
     models.sequelize.sync({ force: true }).then((_) => done());
   });
-  before(() => models.Items.bulkCreate(items));
+  before(() => {
+    models.Items.bulkCreate(items);
+  });
   describe("성공시 ", () => {
     it("item 객체를 담은 배열로 응답한다.", (done) => {
       request(app)
@@ -51,7 +53,9 @@ describe("GET /items/:id", () => {
   before((done) => {
     models.sequelize.sync({ force: true }).then((_) => done());
   });
-  before(() => models.Items.bulkCreate(items));
+  before(() => {
+    models.Items.bulkCreate(items);
+  });
 
   describe("성공시", () => {
     it("id가 1인 item 객체를 반환한다.", (done) => {
@@ -99,7 +103,7 @@ describe("DELETE /items/:id", () => {
 });
 
 //POST
-describe.only("POST /items", () => {
+describe("POST /items", () => {
   const items = [
     { name: "ccc", price: "100$" },
     { name: "bbb", price: "200$" },
@@ -183,27 +187,3 @@ describe("PUT/ items/:id", () => {
     });
   });
 });
-
-//exportDataCsv
-// describe.only("Get/ export", () => {
-//   const items = [
-//     { name: "ccc", price: "100$" },
-//     { name: "bbb", price: "200$" },
-//     { name: "aaa", price: "300$" },
-//   ];
-//   before((done) => {
-//     models.sequelize.sync({ force: true }).then((_) => done());
-//   });
-//   before(() => models.Items.bulkCreate(items));
-
-//   describe("성공시", () => {
-//     it("item 객체를 담은 배열로 응답한다.", (done) => {
-//       request(app)
-//         .get("/items/export")
-//         .end((err, res) => {
-//           res.body.should.be.instanceOf(Array);
-//           done();
-//         });
-//     });
-//   });
-// });
