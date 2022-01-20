@@ -20,7 +20,7 @@ const View = () => {
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <div>View</div>
       <button onClick={getDB}>get Data</button>
       <div className="container">

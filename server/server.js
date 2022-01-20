@@ -196,7 +196,7 @@ app.get("/export", function (req, res) {
 // =======================
 
 try {
-  models.sequelize.sync({ force: false }).then((_) => {
+  models.sequelize.sync({ force: true }).then((_) => {
     console.log("Sync DB completed!");
     app.listen(PORT, () => {
       console.log("Express Server listening on PORT " + PORT);

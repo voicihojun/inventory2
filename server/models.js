@@ -7,8 +7,7 @@ const sequelize = new Sequelize({
 
 const Items = sequelize.define("Items", {
   name: { type: Sequelize.STRING, unique: true },
-  price: { type: Sequelize.STRING },
-  // image: { type: Sequelize.BLOB },
+  price: { type: Sequelize.DOUBLE },
   image: { type: Sequelize.STRING },
 
   createdAt: {

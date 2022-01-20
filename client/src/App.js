@@ -3,14 +3,14 @@ import UploadForm from "./component/UploadForm";
 import UpdateForm from "./component/UpdateForm";
 import View from "./component/View";
 import DeleteForm from "./component/DeleteForm";
-import ExportData from "./component/ExportData";
+import ExportItem from "./component/ExportItem";
 
 function App() {
   return (
     <div>
       <div>inventory application</div>
       <View />
-      <ExportData />
+      <ExportItem />
       <UploadForm />
       <UpdateForm />
       <DeleteForm />

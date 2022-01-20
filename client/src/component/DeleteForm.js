@@ -17,7 +17,7 @@ const DeleteForm = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="wrapper">
       <div>Delete</div>
       <form onSubmit={onSubmit}>
         <label htmlFor="id">id</label>

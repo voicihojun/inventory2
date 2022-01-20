@@ -37,7 +37,7 @@ const UploadForm = () => {
   }, [name, price, image]);
 
   return (
-    <div>
+    <div className="wrapper">
       <div>UploadForm</div>
       <form onSubmit={onSubmit}>
         <label htmlFor="name">name</label>

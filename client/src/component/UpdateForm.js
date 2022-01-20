@@ -42,7 +42,7 @@ const UpdateForm = () => {
   }, [name, price, image]);
 
   return (
-    <div>
+    <div className="wrapper">
       <div>UpdateForm</div>
       <form onSubmit={onSubmit}>
         <label htmlFor="id">id</label>
