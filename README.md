@@ -9,22 +9,34 @@ Hello! Here is the documentation for my project 'Inventory2' in the field of bac
 1. First way : After cloning git repository in your directory with the below command, you can use the API Guide to check
 
 ```
-git clone https://github.com/voicihojun/inventory2.git
+$ git clone https://github.com/voicihojun/inventory2.git
 
-cd server/npm start
+$ cd inventory2/server
+$ npm install
+$ npm start
 ```
 
 2. Second way : After cloning git repository in your directory with the below command, you can use web browser to create, read, update, delete and export
 
 ```
-git clone https://github.com/voicihojun/inventory2.git
+$ git clone https://github.com/voicihojun/inventory2.git
 
-cd server/npm start
+$ cd inventory2/server
+$ npm install
+$ npm start
 
-cd client/npm start
+$ cd inventory2/client
+$ npm install
+$ npm start
 ```
 
 ## DB
+
+To check the database in the command line. pls go to server directory and command like below
+
+```
+$ sqlite3 db.sqlite
+```
 
 ### Items
 
